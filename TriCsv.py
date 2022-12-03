@@ -1,19 +1,6 @@
-import pandas as pd
-import numpy as np
+import csv
+print("Tri commencé!")
 
-df1 = pd.read_csv('conso-annuelles_v1.csv', delimiter= ';')
-
-csvFile = np.array(df1)
-
-df_
-
-triCsv = []
-
-for dataCsv in csvFile:
-    dataFound = False
-    if dataCsv
-
-with open('conso-clean.csv', 'w') as file:
-    for dataFound in triCsv :
-        file.write(dataFound[])
-
+#ouverture du fichier qui doit être trié
+file = open('conso-annuelles_v1.csv', 'r')
+csvFile = csv.reader(file, delimiter=';')
