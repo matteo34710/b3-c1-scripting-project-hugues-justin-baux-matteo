@@ -43,3 +43,10 @@ for row in calculList:
         finalList.append(row)
         firstlineDeux = False
 
+#Definition pour le tri
+def avantDernierCol(col):
+    return float(col[4])
+
+def dernierCol(col):
+    return col[3]
+
