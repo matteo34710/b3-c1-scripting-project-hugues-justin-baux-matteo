@@ -18,3 +18,28 @@ for line in csvFile:
 for col in calculList:
     del col[1]
 
+#Remplacement des virgules en point pour le calcul
+firstline = True
+for row in calculList:
+    if not firstline:
+        row[1] = row[1].replace(',', '.')
+        row[2] = row[2].replace(',', '.')
+    else:
+        firstline = False
+
+#Calcul an1 + an2
+firstlineDeux = True
+for row in calculList:
+    if not firstlineDeux:
+        try:
+            calc = float(row[1]) + float(row[2])
+            row.append(calc)
+            sortList.append(row)
+        except:
+            continue
+            break
+    else:
+        row.append('Année 1 + Année 2')
+        finalList.append(row)
+        firstlineDeux = False
+
