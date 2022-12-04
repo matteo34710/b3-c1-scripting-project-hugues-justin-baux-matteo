@@ -50,3 +50,16 @@ def avantDernierCol(col):
 def dernierCol(col):
     return col[3]
 
+sortList.sort(key=avantDernierCol, reverse=True)
+sortList.sort(key=dernierCol)
+
+#Export des données dans le fichier conso-clean.csv
+with open('conso-clean.csv', 'w', newline='') as files:
+    writer = csv.writer(files, delimiter=';')
+    for line in finalList:
+        writer.writerow(line)
+        for row in sortList:
+            writer.writerow(row)
+        break
+
+print('Tri terminée!')
